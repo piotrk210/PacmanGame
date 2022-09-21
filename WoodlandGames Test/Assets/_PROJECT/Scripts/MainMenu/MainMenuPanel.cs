@@ -16,6 +16,7 @@ namespace _PROJECT.Scripts.MainMenu
         {
             startGameButton.onClick.AddListener(StartGame);
             quiteGameButton.onClick.AddListener(QuiteGame);
+            Cursor.lockState = CursorLockMode.None;
         }
 
         private void OnDestroy()

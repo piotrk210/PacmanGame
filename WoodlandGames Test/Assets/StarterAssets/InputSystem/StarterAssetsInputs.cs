@@ -1,4 +1,6 @@
+using _PROJECT.Scripts.Data;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -74,6 +76,11 @@ namespace StarterAssets
 		private void SetCursorState(bool newState)
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+		}
+
+		private void OnEscape(InputValue inputValue)
+		{
+			SceneManager.LoadScene(Keys.SceneIndex.MAIN_MENU);
 		}
 	}
 	
